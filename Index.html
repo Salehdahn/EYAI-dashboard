@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EYAI Girls in ICT Day 2026 — Daniel Saleh Portfolio</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#FAF8F5;color:#1C1B1F;line-height:1.5}
+.wrap{max-width:900px;margin:0 auto;padding:2rem 1.5rem 4rem}
+
+.hero{background:linear-gradient(135deg,#3D1B59,#5B2C82);padding:2.5rem 2rem 2rem;color:#fff;border-radius:12px;margin-bottom:1.5rem}
+.hero-tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#D8C9E8;margin-bottom:.75rem;font-weight:600}
+.hero h1{font-size:clamp(22px,4vw,34px);font-weight:400;line-height:1.15;margin-bottom:.5rem}
+.hero-sub{font-size:14px;color:#E3D6EE;max-width:560px;line-height:1.65}
+.hero-meta{display:flex;gap:1.5rem;margin-top:1.25rem;flex-wrap:wrap;font-size:12.5px;color:#CDB8E0}
+.hero-meta strong{color:#fff;font-weight:600}
+
+.integrity{background:#fff;border:0.5px solid #DCD4C6;border-radius:8px;padding:.75rem 1rem;margin-bottom:1.5rem;font-size:13px;color:#6B6358;display:flex;gap:.75rem;align-items:flex-start}
+.integrity .dot{width:8px;height:8px;border-radius:50%;background:#0F6E56;flex-shrink:0;margin-top:4px}
+
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.75rem}
+.kpi{background:#fff;border:0.5px solid #DCD4C6;border-radius:8px;padding:.9rem 1rem}
+.kpi .n{font-size:24px;font-weight:400;color:#1C1B1F;line-height:1.1}
+.kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#6B6358;margin-top:5px;font-weight:600}
+.kpi.accent .n{color:#0F6E56}
+.kpi.amber .n{color:#854F0B}
+
+.section{margin-bottom:2rem}
+.sec-head{display:flex;align-items:center;gap:10px;margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid #DCD4C6}
+.sec-num{font-size:10px;font-weight:600;color:#fff;background:#5B2C82;padding:2px 8px;border-radius:3px;letter-spacing:.04em}
+.sec-head h2{font-size:16px;font-weight:500;color:#1C1B1F}
+.sec-note{font-size:13px;color:#6B6358;margin-bottom:1rem;line-height:1.65;max-width:640px}
+
+.filter-row{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap}
+.filter-row label{font-size:13px;color:#6B6358;font-weight:500}
+.filter-row select{font-size:13px;padding:7px 12px;border:1px solid #DCD4C6;border-radius:6px;background:#fff;color:#1C1B1F;cursor:pointer;outline:none}
+.filter-row select:focus{border-color:#5B2C82}
+
+.chart-wrap{background:#fff;border:0.5px solid #DCD4C6;border-radius:8px;padding:1.25rem}
+.chart-legend{display:flex;gap:14px;margin-bottom:1rem;font-size:12px;color:#6B6358}
+.legend-dot{width:10px;height:10px;border-radius:2px;display:inline-block;margin-right:5px;vertical-align:middle}
+
+.bar-chart{display:flex;flex-direction:column;gap:12px}
+.bar-row{display:grid;grid-template-columns:150px 1fr 62px;align-items:center;gap:10px}
+.bar-row .bn{font-size:12.5px;color:#1C1B1F;font-weight:500;line-height:1.3}
+.track{background:#F1ECE4;border-radius:3px;overflow:hidden}
+.fill{height:20px;border-radius:3px;transition:width 1.1s cubic-bezier(.16,1,.3,1);width:0}
+.pair-track{display:flex;flex-direction:column;gap:5px}
+.pair-track .track{height:17px}
+.bar-row .bv{font-size:12.5px;font-weight:600;color:#1C1B1F;text-align:right}
+
+.table-wrap{background:#fff;border:0.5px solid #DCD4C6;border-radius:8px;overflow:hidden;margin-top:.75rem}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:9px 12px;background:#5B2C82;color:#fff;font-weight:600;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em}
+td{padding:9px 12px;border-bottom:0.5px solid #DCD4C6;color:#1C1B1F}
+tr:last-child td{border-bottom:none;font-weight:600}
+tr:nth-child(even) td{background:#FAF8F5}
+.num{text-align:center;font-weight:500}
+.pos{color:#0F6E56}
+
+.quote-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:.75rem}
+.quote-card{background:#fff;border:0.5px solid #DCD4C6;border-left:3px solid #5B2C82;padding:.9rem 1rem;border-radius:0 6px 6px 0}
+.q-tag{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:#0F6E56;font-weight:700;margin-bottom:5px}
+.q-text{font-size:13px;color:#1C1B1F;font-style:italic;line-height:1.55}
+
+.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px}
+.process-card{background:#fff;border:0.5px solid #DCD4C6;border-radius:8px;padding:.9rem 1rem}
+.p-step{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#6B6358;margin-bottom:4px}
+.p-title{font-size:13.5px;font-weight:600;color:#1C1B1F;margin-bottom:4px}
+.p-body{font-size:12px;color:#6B6358;line-height:1.55}
+
+.rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.rec-card{background:#fff;border:0.5px solid #DCD4C6;border-radius:8px;padding:.9rem 1rem}
+.rec-cat{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#5B2C82;margin-bottom:7px}
+.rec-card ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.rec-card ul li{font-size:12.5px;color:#1C1B1F;padding-left:13px;position:relative;line-height:1.4}
+.rec-card ul li::before{content:'';position:absolute;left:0;top:6px;width:5px;height:5px;border-radius:50%;background:#0F6E56}
+
+.footer{border-top:1px solid #DCD4C6;padding-top:1rem;margin-top:2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;color:#6B6358}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hero">
+  <div class="hero-tag">Research &amp; Data Management &middot; Portfolio Piece</div>
+  <h1>EYAI Girls in ICT Day 2026</h1>
+  <p class="hero-sub">End-to-end M&amp;E analysis: survey design, data cleaning, multi-phase quantitative and qualitative analysis, and impact reporting across three schools and 120 survey responses.</p>
+  <div class="hero-meta">
+    <span><strong>Daniel Saleh</strong> &mdash; Research &amp; Data Management Lead</span>
+    <span><strong>Tools:</strong> Excel, Python, COUNTIFS, INDEX MATCH, data validation</span>
+    <span><strong>June 2026</strong></span>
+  </div>
+</div>
+
+<div class="integrity">
+  <div class="dot"></div>
+  <span>All figures are sourced directly from original survey-entry files after two data integrity issues were identified and corrected during analysis. Pre/post comparisons are between independent samples &mdash; no identifiers were collected on paper forms, so individual-level matching was not possible.</span>
+</div>
+
+<div class="kpi-grid">
+  <div class="kpi accent"><div class="n">+20<span style="font-size:15px">pp</span></div><div class="l">Career interest shift</div></div>
+  <div class="kpi"><div class="n">120</div><div class="l">Total responses</div></div>
+  <div class="kpi accent"><div class="n">86.7%</div><div class="l">Plan to research further</div></div>
+  <div class="kpi"><div class="n">4.52/5</div><div class="l">Top feature: speakers</div></div>
+  <div class="kpi amber"><div class="n">2</div><div class="l">Data bugs caught &amp; fixed</div></div>
+</div>
+
+<div class="section">
+  <div class="sec-head"><span class="sec-num">01</span><h2>Career interest &mdash; before and after</h2></div>
+  <p class="sec-note">Pre-event measured general interest in a tech career. Post-event measured whether the event specifically increased that interest. Bishop Howells started furthest behind and moved the most.</p>
+  <div class="filter-row">
+    <label>Filter by school:</label>
+    <select id="schoolFilter" onchange="updateCharts()">
+      <option value="all">All schools</option>
+      <option value="bishop">Bishop Howells</option>
+      <option value="cms">CMS Grammar School</option>
+      <option value="fce">FCE (Technical)</option>
+    </select>
+  </div>
+  <div class="chart-wrap">
+    <div class="chart-legend">
+      <span><span class="legend-dot" style="background:#C9B3DB"></span>Pre-event sample</span>
+      <span><span class="legend-dot" style="background:#0F6E56"></span>Post-event sample</span>
+    </div>
+    <div class="bar-chart" id="careerBars"></div>
+  </div>
+  <div class="table-wrap">
+    <table id="careerTable">
+      <thead><tr><th>School</th><th>Pre-sample</th><th>Post-sample</th><th>Difference</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-head"><span class="sec-num">02</span><h2>Event quality</h2></div>
+  <p class="sec-note">Five dimensions rated out of 5 by post-event respondents. Speakers were the clear standout. The group challenge scored lower, particularly at CMS (3.60 vs 4.35&ndash;4.45 elsewhere).</p>
+  <div class="chart-wrap">
+    <div class="bar-chart" id="featureBars"></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-head"><span class="sec-num">03</span><h2>What students plan to do next</h2></div>
+  <p class="sec-note">Measured immediately after the event. Nearly 9 in 10 plan to keep learning independently &mdash; the strongest single indicator in the dataset.</p>
+  <div class="chart-wrap">
+    <div class="bar-chart" id="momentumBars"></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-head"><span class="sec-num">04</span><h2>Student voices</h2></div>
+  <p class="sec-note">Before the event, students named community problems they wanted tech to solve. After, they named what stayed with them.</p>
+  <div class="filter-row">
+    <label>View:</label>
+    <select onchange="toggleQuotes(this.value)">
+      <option value="before">Before &mdash; what they want to fix</option>
+      <option value="after">After &mdash; what they remember</option>
+    </select>
+  </div>
+  <div class="quote-grid" id="quotesBefore">
+    <div class="quote-card"><div class="q-tag">Sanitation</div><div class="q-text">"A machine that can help clean the environment."</div></div>
+    <div class="quote-card"><div class="q-tag">Healthcare</div><div class="q-text">"Help sick and pregnant women get better treatment."</div></div>
+    <div class="quote-card"><div class="q-tag">Education</div><div class="q-text">"Education solution for those who cannot afford it."</div></div>
+    <div class="quote-card"><div class="q-tag">Security</div><div class="q-text">"Solve problems relating to crime, fraud and cybercrime."</div></div>
+    <div class="quote-card"><div class="q-tag">Power supply</div><div class="q-text">"Build a machine that can generate light."</div></div>
+    <div class="quote-card"><div class="q-tag">Poverty</div><div class="q-text">"Communication and digital illiteracy."</div></div>
+  </div>
+  <div class="quote-grid" id="quotesAfter" style="display:none">
+    <div class="quote-card"><div class="q-tag">AI understanding</div><div class="q-text">"More on AI &mdash; how it actually works."</div></div>
+    <div class="quote-card"><div class="q-tag">App-building</div><div class="q-text">"App creation using lovable and gemini."</div></div>
+    <div class="quote-card"><div class="q-tag">Group challenge</div><div class="q-text">"The group challenge and app building together."</div></div>
+    <div class="quote-card"><div class="q-tag">Career</div><div class="q-text">"Creativity with AI, especially for girls too."</div></div>
+    <div class="quote-card"><div class="q-tag">Prompting</div><div class="q-text">"AI prompting &mdash; I didn't know this was a skill."</div></div>
+    <div class="quote-card"><div class="q-tag">Improvement ask</div><div class="q-text">"More laptops and resources next time."</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-head"><span class="sec-num">05</span><h2>Analysis process</h2></div>
+  <p class="sec-note">How this report was built, from raw paper forms to verified findings.</p>
+  <div class="process-grid">
+    <div class="process-card"><div class="p-step">Step 1</div><div class="p-title">Survey design</div><div class="p-body">Designed pre and post instruments with matched themes, closed-ended questions, and an identifier system for future editions.</div></div>
+    <div class="process-card"><div class="p-step">Step 2</div><div class="p-title">Data entry &amp; cleaning</div><div class="p-body">Extracted 120 responses from original source files. Identified and corrected a column-shift error and a fabricated matching system.</div></div>
+    <div class="process-card"><div class="p-step">Step 3</div><div class="p-title">Quantitative analysis</div><div class="p-body">Used COUNTIFS, AVERAGEIF, INDEX MATCH and SUMPRODUCT across 9 structured Excel sheets to calculate all indicators.</div></div>
+    <div class="process-card"><div class="p-step">Step 4</div><div class="p-title">Qualitative coding</div><div class="p-body">Read and themed all 60 open-text responses across 3 questions. Single-coder categorisation with disclosed limitations.</div></div>
+    <div class="process-card"><div class="p-step">Step 5</div><div class="p-title">Impact report</div><div class="p-body">9-section Word report with embedded charts, data integrity note, and a full appendix documenting every correction made.</div></div>
+    <div class="process-card"><div class="p-step">Step 6</div><div class="p-title">Interactive dashboard</div><div class="p-body">Live Excel dashboard with school-level filtering and formula-driven KPIs, plus this standalone HTML portfolio page.</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-head"><span class="sec-num">06</span><h2>Recommendations</h2></div>
+  <div class="rec-grid">
+    <div class="rec-card"><div class="rec-cat">Programming</div><ul>
+      <li>Investigate the group challenge at CMS, which scored 0.53 below the overall average</li>
+      <li>Prioritise laptop availability and schedule buffer time for the next edition</li>
+    </ul></div>
+    <div class="rec-card"><div class="rec-cat">Targeting</div><ul>
+      <li>Target schools with lower baseline tech exposure, where relative gains are largest</li>
+      <li>Add a segment on women in tech, as role model awareness was the weakest baseline metric at 46.7%</li>
+    </ul></div>
+    <div class="rec-card"><div class="rec-cat">Programme growth</div><ul>
+      <li>Use the 20pp career interest shift to support funding conversations</li>
+      <li>Replicate at additional schools with similar baseline profiles</li>
+      <li>Run a follow-up check 4 to 8 weeks post-event to validate stated intentions</li>
+    </ul></div>
+    <div class="rec-card"><div class="rec-cat">Research &amp; M&amp;E</div><ul>
+      <li>Collect a real participant identifier on both forms going forward</li>
+      <li>Verify every column against the original source before reusing any cleaned file</li>
+      <li>Use identical wording for any pre/post item intended for direct comparison</li>
+    </ul></div>
+  </div>
+</div>
+
+<div class="footer">
+  <span>EYAI Girls in ICT Day 2026 &middot; Research &amp; Data Management</span>
+  <span>Daniel Saleh &middot; Research &amp; Data Management Lead &middot; June 2026</span>
+</div>
+</div>
+
+<script>
+const DATA={all:{pre:70,post:90,gc:4.13,label:'All schools'},bishop:{pre:55,post:85,gc:4.45,label:'Bishop Howells'},cms:{pre:75,post:90,gc:3.60,label:'CMS Grammar School'},fce:{pre:80,post:95,gc:4.35,label:'FCE (Technical)'}};
+const TABLE_ALL=[['Bishop Howells','55%','85%','+30pp'],['CMS Grammar School','75%','90%','+15pp'],['FCE (Technical)','80%','95%','+15pp'],['Overall','70%','90%','+20pp']];
+
+function buildPaired(el,rows){
+  el.innerHTML='';
+  rows.forEach(r=>{
+    const d=document.createElement('div');d.className='bar-row';
+    d.innerHTML=`<div class="bn">${r.label}</div><div class="pair-track"><div class="track"><div class="fill" style="background:#C9B3DB" data-w="${r.pre}"></div></div><div class="track"><div class="fill" style="background:#0F6E56" data-w="${r.post}"></div></div></div><div class="bv">${r.post}%</div>`;
+    el.appendChild(d);
+  });
+  setTimeout(()=>el.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%'),80);
+}
+
+function buildSingle(el,rows,max,suffix){
+  el.innerHTML='';
+  rows.forEach(r=>{
+    const d=document.createElement('div');d.className='bar-row';
+    d.innerHTML=`<div class="bn">${r.label}</div><div class="track" style="height:22px"><div class="fill" style="background:${r.color||'#534AB7'}" data-w="${(r.val/max*100).toFixed(1)}"></div></div><div class="bv">${r.val}${suffix}</div>`;
+    el.appendChild(d);
+  });
+  setTimeout(()=>el.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%'),80);
+}
+
+function updateCharts(){
+  const s=document.getElementById('schoolFilter').value;
+  const d=DATA[s];
+  buildPaired(document.getElementById('careerBars'),s==='all'?[{label:'Bishop Howells',pre:55,post:85},{label:'CMS',pre:75,post:90},{label:'FCE (T)',pre:80,post:95}]:[{label:d.label,pre:d.pre,post:d.post}]);
+  const tbody=document.querySelector('#careerTable tbody');
+  tbody.innerHTML='';
+  const rows=s==='all'?TABLE_ALL:[[d.label,d.pre+'%',d.post+'%','+'+(d.post-d.pre)+'pp']];
+  rows.forEach((r,i)=>{
+    const tr=document.createElement('tr');
+    tr.innerHTML=r.map((c,ci)=>`<td class="${ci>0?'num':''} ${ci===3?'pos':''}">${c}</td>`).join('');
+    tbody.appendChild(tr);
+  });
+}
+
+buildSingle(document.getElementById('featureBars'),[{label:'Speakers',val:4.52,color:'#0F6E56'},{label:'Sessions',val:4.31,color:'#534AB7'},{label:'Organisation',val:4.30,color:'#534AB7'},{label:'Would recommend',val:4.15,color:'#534AB7'},{label:'Group challenge',val:4.13,color:'#B9701E'}],5,'/5');
+buildSingle(document.getElementById('momentumBars'),[{label:'Research ICT/AI online',val:86.7,color:'#0F6E56'},{label:'Encourage a friend',val:68.3,color:'#534AB7'},{label:'Join a coding club',val:63.3,color:'#534AB7'},{label:'Follow EYAI socials',val:58.3,color:'#534AB7'},{label:'Talk to a teacher',val:38.3,color:'#B9701E'}],100,'%');
+updateCharts();
+
+function toggleQuotes(v){document.getElementById('quotesBefore').style.display=v==='before'?'':'none';document.getElementById('quotesAfter').style.display=v==='after'?'':'none';}
+</script>
+</body>
+</html>
